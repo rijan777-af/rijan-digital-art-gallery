@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rijan’s Digital Art Gallery – ICT171</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      transition: transform 0.3s;
+    }
+
+    header h1:hover {
+      transform: scale(1.03);
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 1.1rem;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .section h2 {
+      color: #2575fc;
+      margin-top: 0;
+      transition: color 0.3s;
+    }
+
+    .section h2:hover {
+      color: #6a11cb;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .gallery-item {
+      width: 280px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+      background: #fdfdfd;
+      transform: translateY(30px);
+      opacity: 0;
+      animation: slideIn 0.6s ease forwards;
+    }
+
+    .gallery-item:nth-child(1) { animation-delay: 0.2s; }
+    .gallery-item:nth-child(2) { animation-delay: 0.4s; }
+    .gallery-item:nth-child(3) { animation-delay: 0.6s; }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item p {
+      padding: 10px;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .license {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .license img {
+      width: 150px;
+      margin-top: 8px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.95rem;
+      padding: 25px;
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+      color: white;
+      margin-top: 50px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .gallery-item {
+        width: 90%;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rijan’s Digital Art Gallery</h1>
+    <p><strong>Student ID:</strong> 35318341 | Murdoch University</p>
+    <p>ICT171 Assignment 2 | Last Updated: 4 June 2025</p>
+  </header>
+
+  <div class="section">
+    <h2>About Me</h2>
+    <p>I'm <strong>Rijan Shrestha</strong>, an ICT student at Murdoch University with a passion for digital creativity and cloud technologies. This project combines web hosting, Linux skills, and original artwork into one live cloud-deployed gallery.</p>
+  </div>
+
+  <div class="section">
+    <h2>Gallery Showcase</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/art1.jpg" alt="Artwork 1">
+        <p><strong>Title:</strong> Dream Sketch<br><strong>Source:</strong> Pinterest<br><em>Used for educational purposes only.</em></p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/art2.jpg" alt="Artwork 2">
+        <p><strong>Title:</strong> Future City<br><strong>Source:</strong> Pinterest<br><em>Used for educational purposes only.</em></p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/art3.jpg" alt="Artwork 3">
+        <p><strong>Title:</strong> Pixel Garden<br><strong>Source:</strong> Pinterest<br><em>Used for educational purposes only.</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Project Summary</h2>
+    <p>This gallery is hosted using <strong>Apache2</strong> on an <strong>Ubuntu EC2 instance</strong> in AWS. It features student-curated artworks and demonstrates cloud skills like SSH configuration, Linux hosting, domain setup, and HTTPS deployment.</p>
+  </div>
+
+  <div class="section">
+    <h2>License</h2>
+    <p>This website’s code and original content are licensed under the <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong> license.</p>
+    <p>⚠️ Some demo images (e.g., from Pinterest) are not licensed for reuse and are used for educational display only.</p>
+    <div class="license">
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+        <img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="Creative Commons License">
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Rijan Shrestha | ICT171 Assignment 2 | Hosted on AWS EC2 with Apache2
+  </footer>
+
+</body>
+</html>
