@@ -56,6 +56,11 @@ They are used strictly for academic demonstration purposes only and are not lice
 
 ---
 
+🎬 [Watch Assignment Demo Video]( https://youtu.be/UqIX3bnoirA?si=8pohP_QOE6fRendb )
+
+---
+
+
 ## 🛡️ License
 
 This project’s HTML and CSS code is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
@@ -70,3 +75,7 @@ This project’s HTML and CSS code is licensed under the [Creative Commons Attri
    ```bash
    git clone https://github.com/rijan777-af/rijan-digital-art-gallery.git
    cd rijan-digital-art-gallery
+
+   ---
+
+
